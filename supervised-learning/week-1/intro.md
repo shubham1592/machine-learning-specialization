@@ -1,23 +1,64 @@
-## Four Major Types of Machine Learning
+# Machine Learning: Core Concepts and Models
+
+## Types of Machine Learning
 
 ### 1. Supervised Learning
 Learns from labeled data — input \( x \) maps to output \( y \).
 
-- **Example:** Classifying emails as spam (1) or not spam (0).
+- **Goal**: Learn a function that approximates the mapping from inputs to outputs.
+- **Example**: Email spam classification (Spam = 1, Not Spam = 0)
+- **Applications**: Fraud detection, sentiment analysis, disease prediction.
 
 ### 2. Unsupervised Learning
-Finds patterns in unlabeled data.
+Finds structure in data without labels.
 
-- **Clustering:** Groups similar items (e.g., customer segmentation).
-- **Anomaly Detection:** Flags outliers (e.g., fraud detection).
-- **Dimensionality Reduction:** Compresses data while preserving key features (e.g., PCA).
+- **Clustering**: e.g., Customer segmentation.
+- **Anomaly Detection**: e.g., Fraud detection.
+- **Dimensionality Reduction**: e.g., PCA for data compression.
 
 ### 3. Reinforcement Learning
-Learns by interacting with an environment to maximize rewards.
+Learns by interacting with an environment to maximize cumulative reward.
 
-- **Example:** Training a game-playing agent through trial and error.
+- **Example**: AlphaGo, Self-driving car navigation.
+- **Applications**: Robotics, game AI, trading algorithms.
 
-### 4. Recommender Systems
-Suggests items based on user behavior and preferences. Uses collaborative filtering, content-based filtering, or hybrids.
+---
 
-- **Example:** Netflix recommending movies based on what you've watched.
+## Supervised Learning: Linear Regression (Single Variable)
+
+### Model
+\[
+f_{w,b}(x) = wx + b
+\]
+
+### Parameters
+- \( w \): weight (slope)
+- \( b \): bias (intercept)
+
+### Cost Function
+\[
+J(w, b) = \frac{1}{2m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right)^2
+\]
+
+Where:
+- \( m \): number of training examples
+- \( x^{(i)} \): i-th input
+- \( y^{(i)} \): i-th true output
+- \( f_{w,b}(x^{(i)}) \): predicted output
+
+### Objective
+\[
+\min_{w,b} J(w, b)
+\]
+
+### Applications
+- Predicting house prices based on size
+- Forecasting stock prices (linear trend)
+- Estimating sales based on advertising spend
+
+---
+
+## Note
+- Linear regression assumes a linear relationship between input and output.
+- Cost function is MSE (Mean Squared Error), differentiable, convex.
+- Gradient Descent is used to minimize cost and update \( w \) and \( b \).
