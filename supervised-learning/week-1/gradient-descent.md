@@ -57,7 +57,7 @@ Repeat until convergence:
 
 ## Applications
 - Training ML models (linear regression, logistic regression, neural networks)
-- Optimization problems in economics, finance, engineering
+- Optimization problems in economics, finance, and engineering
 
 ---
 
