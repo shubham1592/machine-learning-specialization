@@ -5,39 +5,39 @@ Gradient Descent is an **optimization algorithm** used to minimize the cost func
 ---
 
 ## Goal
-Minimize the cost function $J(\theta)$ by updating parameters $\theta$ iteratively.
+Minimize the cost function `J(θ)` by updating parameters `θ` iteratively.
 
 ---
 
 ## Update Rule
-For parameters $\theta_j$ (where $j = 0, 1$):
+For parameters `θ_j` (where `j = 0, 1`):
 
-$$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$
+`θ_j := θ_j - α * (∂/∂θ_j) J(θ_0, θ_1)`
 
 Where:
-- $\alpha$: Learning rate (step size)
-- $\frac{\partial}{\partial \theta_j} J(\theta)$: Partial derivative of cost function
+- `α`: Learning rate (step size)
+- `(∂/∂θ_j) J(θ)`: Partial derivative of cost function
 
 ---
 
 ## For Linear Regression
 The derivatives for univariate linear regression:
 
-$$\frac{\partial}{\partial \theta_0} J(\theta) = \frac{1}{m} \sum_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)})$$
+`(∂/∂θ_0) J(θ) = (1/m) * Σ(h_θ(x^(i)) - y^(i))`
 
-$$\frac{\partial}{\partial \theta_1} J(\theta) = \frac{1}{m} \sum_{i=1}^{m}((h_\theta(x^{(i)}) - y^{(i)})x^{(i)})$$
+`(∂/∂θ_1) J(θ) = (1/m) * Σ((h_θ(x^(i)) - y^(i)) * x^(i))`
 
 ---
 
 ## Algorithm (Batch Gradient Descent)
 Repeat until convergence:
-$$\theta_0 := \theta_0 - \alpha \cdot \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})$$
-$$\theta_1 := \theta_1 - \alpha \cdot \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x^{(i)}$$
+`θ_0 := θ_0 - α * (1/m) * Σ(h_θ(x^(i)) - y^(i))`
+`θ_1 := θ_1 - α * (1/m) * Σ(h_θ(x^(i)) - y^(i)) * x^(i)`
 
 ---
 
 ## Key Points
-- **Learning rate $\alpha$**: Too small → slow; Too large → may overshoot
+- **Learning rate `α`**: Too small → slow; Too large → may overshoot
 - Always move in the direction of **negative gradient**
 - Gradient descent can get stuck in **local minima**, though for convex cost functions (like linear regression), global minimum is guaranteed
 
@@ -62,7 +62,7 @@ $$\theta_1 := \theta_1 - \alpha \cdot \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}
 ---
 
 ## Example
-Suppose you start with $\theta_0 = 0, \theta_1 = 0$, learning rate $\alpha = 0.01$
-Each step moves $\theta_0, \theta_1$ closer to the values that minimize $J(\theta)$
+Suppose you start with `θ_0 = 0, θ_1 = 0`, learning rate `α = 0.01`
+Each step moves `θ_0, θ_1` closer to the values that minimize `J(θ)`
 
-Monitor convergence by plotting $J(\theta)$ over iterations.
+Monitor convergence by plotting `J(θ)` over iterations.
