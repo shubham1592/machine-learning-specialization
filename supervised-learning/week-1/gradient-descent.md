@@ -65,4 +65,4 @@ Repeat until convergence:
 Suppose you start with `θ_0 = 0, θ_1 = 0`, learning rate `α = 0.01`
 Each step moves `θ_0, θ_1` closer to the values that minimize `J(θ)`
 
-Monitor convergence by plotting `J(θ)` over iterations.
+Monitor convergence by plotting `J(θ)` over the iterations.
